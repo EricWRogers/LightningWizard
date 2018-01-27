@@ -8,15 +8,17 @@ public class pauseMenu : MonoBehaviour {
     public GameObject pause;
     private bool isEnabled = false;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    private GameManager gameloop;
+
+    void Start()
+    {
+        gameloop = GameObject.Find("GM").GetComponent<GameManager>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
         // Enable pause menu
-        if (Input.GetKeyDown(KeyCode.Escape) && !isEnabled)
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton7) || Input.GetKeyDown(KeyCode.JoystickButton9) && !isEnabled)
         {
             pause.SetActive(true);
             isEnabled = true;
@@ -26,7 +28,7 @@ public class pauseMenu : MonoBehaviour {
         }
 
         // disable pause menu
-        else if (Input.GetKeyDown(KeyCode.Escape) && isEnabled)
+        else if (Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.JoystickButton7)||Input.GetKeyDown(KeyCode.JoystickButton9) && isEnabled)
         {
             pause.SetActive(false);
             isEnabled = false;
@@ -36,7 +38,7 @@ public class pauseMenu : MonoBehaviour {
     public void SaveButton()
     {
         //PersistentStorage.instance.Save();//saves 
-        //gameloop.Save();
+        gameloop.Save();
     }
 
     public void Resume(){

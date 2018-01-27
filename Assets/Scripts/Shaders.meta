@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/PreFabs.meta
+guid: d86926c18e6084f0495bea08d48d2242
+folderAsset: yes
+timeCreated: 1517030384
+=======
+guid: b6bc046cda9bd5b4eb394dc37522e231
+folderAsset: yes
+timeCreated: 1517070706
+>>>>>>> 7bcf1a935fd52cb286cf29774f6ac9839aca1cad:Assets/Scripts/Shaders.meta
+licenseType: Free
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
