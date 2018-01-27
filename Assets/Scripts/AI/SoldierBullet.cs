@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SoldierBullet : MonoBehaviour
 {
+    public bool projectileMotion = false;
 
     Rigidbody rigidbody;
 

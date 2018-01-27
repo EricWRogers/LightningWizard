@@ -19,6 +19,10 @@ public class Soldier : MonoBehaviour
     public GameObject bulletPrefab;
 
     public float bulletSpeed = 3f;
+
+    /// <summary>
+    /// Counted in seconds
+    /// </summary>
     public float attackWaitTime = 0.5f;
 
 
@@ -26,14 +30,16 @@ public class Soldier : MonoBehaviour
 
     Unit parentUnit = null;
 
+    [HideInInspector]
+    public Transform bulletSpawnerTransform;
+
     CharacterController soldierCharacterController;
     NavMeshAgent navMeshAgent;
-    Transform bulletSpawnerTransform;
 
     /// <summary>
     /// Counted in seconds
     /// </summary>
-    public float lastAttackTime = 0;
+    float lastAttackTime = 0;
 
 
     void Awake()
