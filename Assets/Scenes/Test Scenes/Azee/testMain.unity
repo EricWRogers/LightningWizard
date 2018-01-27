@@ -496,8 +496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1df51f9416b8b341abb58f00e964d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soldierGameObjects:
-  - {fileID: 1988344416}
+  soldiers:
+  - {fileID: 1988344422}
 --- !u!1 &1988344416
 GameObject:
   m_ObjectHideFlags: 0
