@@ -1,38 +1,16 @@
 fileFormatVersion: 2
-guid: 4af8d531816c16f4cb05fd384d09ea5f
-timeCreated: 1517082838
+guid: 4a5378a0661ec6c48aba1b8f4a8e347f
+timeCreated: 1517087510
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: barrell
-    100004: barrellmetal
-    100006: barrellmetal4
-    100008: barrellmetal5
-    100010: barrellmetal6
     400000: //RootNode
-    400002: barrell
-    400004: barrellmetal
-    400006: barrellmetal4
-    400008: barrellmetal5
-    400010: barrellmetal6
     2100000: lambert1
-    2300000: barrell
-    2300002: barrellmetal
-    2300004: barrellmetal4
-    2300006: barrellmetal5
-    2300008: barrellmetal6
-    3300000: barrell
-    3300002: barrellmetal
-    3300004: barrellmetal4
-    3300006: barrellmetal5
-    3300008: barrellmetal6
-    4300000: barrell
-    4300002: barrellmetal
-    4300004: barrellmetal4
-    4300006: barrellmetal5
-    4300008: barrellmetal6
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pillar2
     9500000: //RootNode
   externalObjects: {}
   materials:
