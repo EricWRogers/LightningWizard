@@ -5,27 +5,25 @@ using UnityEngine;
 public class AIManager : MonoBehaviour
 {
 
-    GameObject playerGameObject;
+    [HideInInspector]
+    public GameObject playerGameObject;
 
-    Unit[] units;
+    UnitAIManager unitAiManager;
 
     void Awake()
     {
-        playerGameObject = GameObject.FindGameObjectWithTag("Player");
+        playerGameObject = GameObject.FindGameObjectWithTag(Tags.Player);
+        unitAiManager = GetComponent<UnitAIManager>();
     }
 
 	// Use this for initialization
 	void Start () {
-		foreach(Unit unit in units)
-	    {
-            unit.marchTowardsPlayer(playerGameObject);
-	    }
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
 
+    }
 
 }
