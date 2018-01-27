@@ -16,11 +16,11 @@ public class Unit : MonoBehaviour
 		
 	}
 
-    public void marchTowardsPlayer()
+    public void marchTowardsPlayer(GameObject playerObject)
     {
         foreach (Soldier soldier in soldiers)
         {
-//            soldier.moveToPlayer();
+            soldier.moveTowards(gameObject.transform.position);
         }
     }
 }

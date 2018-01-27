@@ -13,4 +13,9 @@ public class Soldier : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void moveTowards(Vector3 targetPos)
+    {
+        
+    }
 }

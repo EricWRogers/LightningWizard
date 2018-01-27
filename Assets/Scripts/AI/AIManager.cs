@@ -18,7 +18,7 @@ public class AIManager : MonoBehaviour
 	void Start () {
 		foreach(Unit unit in units)
 	    {
-            unit.prepareToEngage();
+            unit.marchTowardsPlayer(playerGameObject);
 	    }
 	}
 	
