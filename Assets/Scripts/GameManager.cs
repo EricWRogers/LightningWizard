@@ -5,12 +5,12 @@ using System;
 using System.IO;
 using UnityEngine.UI;
 
-public class GameLoop : MonoBehaviour {
-    //Player
+public class GameManager : MonoBehaviour {
+//Player
     public int Level = 1;
     public int pLevel = 0;
     public int nextLevel = 5;
-    public int Souls = 0;
+    public int ex = 0;
     public int Speed = 1;
     public int Health = 10;
     public int mHealth = 10;
@@ -33,7 +33,7 @@ public class GameLoop : MonoBehaviour {
     //Inventory
     public Text curLevelText;
     public Text PlayerLevelText;
-    public Text soulText;
+    public Text exText;
     public Text speedText;
     public Text healthText;
     public Text attackText;
@@ -63,7 +63,7 @@ public class GameLoop : MonoBehaviour {
     }
     private void FixedUpdate(){
         
-        if (Souls >= nextLevel)
+        if (ex >= nextLevel)
         {
             //Run Levelup and raise next Level
             pLevel++;
@@ -100,21 +100,21 @@ public class GameLoop : MonoBehaviour {
         }
         curLevelText.text=("Level: " + Level);
         PlayerLevelText.text = ("Player Level: " + pLevel);
-        soulText.text = ("Souls: " + Souls);
+        exText.text = ("ex: " + ex);
         speedText.text = ("Speed: " + Speed);
         healthText.text = ("Health: " + Health+"/"+mHealth);
         attackText.text = ("Attack: " + minAttack + "/" + maxAttack);
         defenceText.text = ("Defence: " + minDefence + "/" + maxDefence);
         magicText.text = ("Magic: " + Magic + "/" + maxMagic);
 
-        if(Souls>=10){//make upgrade button visible 
+        if(ex>=10){//make upgrade button visible 
             upgradeBtn.gameObject.SetActive(true);
         }
         else{
             upgradeBtn.gameObject.SetActive(false);
         }
 
-        if(Souls>=50){//make max out button visible
+        if(ex>=50){//make max out button visible
             maxOutBtn.gameObject.SetActive(true);
         }
         else{
@@ -164,7 +164,7 @@ public class GameLoop : MonoBehaviour {
         sw.WriteLine(Level);
         sw.WriteLine(pLevel);
         sw.WriteLine(nextLevel);
-        sw.WriteLine(Souls);
+        sw.WriteLine(ex);
         sw.WriteLine(Speed);
         sw.WriteLine(Health);
         sw.WriteLine(mHealth);
@@ -185,7 +185,7 @@ public class GameLoop : MonoBehaviour {
         Level = Int32.Parse(sr.ReadLine());
         pLevel = Int32.Parse(sr.ReadLine());
         nextLevel = Int32.Parse(sr.ReadLine());
-        Souls = Int32.Parse(sr.ReadLine());
+        ex = Int32.Parse(sr.ReadLine());
         Speed = Int32.Parse(sr.ReadLine());
         Health = Int32.Parse(sr.ReadLine());
         mHealth = Int32.Parse(sr.ReadLine());
