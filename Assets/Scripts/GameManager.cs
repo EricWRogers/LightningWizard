@@ -14,22 +14,22 @@ public class GameManager : MonoBehaviour {
     public int Speed = 1;
     public int Health = 10;
     public int mHealth = 10;
-    public int minAttack = 5;
-    public int maxAttack = 10;
-    public int minDefence = 5;
-    public int maxDefence = 10;
-    public int Magic = 15;
-    public int maxMagic = 15;
+	public int Mana = 10;
+	public int mMana = 10;
+
     //Player Spawner and Exit
     public bool playerIsDead = true;
     public GameObject player;
     public GameObject pSpawner;
     public GameObject pExit;
+
     //Enemy
     public GameObject Enemy;
     public int numOfEnemies;
+
     //Array of Enemy Spawners
     public GameObject[] eSpawners;
+
     //Inventory
     public Text curLevelText;
     public Text PlayerLevelText;
@@ -40,11 +40,11 @@ public class GameManager : MonoBehaviour {
     public Text defenceText;
     public Text magicText;
     //Upgrade button
-    public Button upgradeBtn;
+    //public Button upgradeBtn;
     //Max out button
-    public Button maxOutBtn;
+    //public Button maxOutBtn;
     //health bar
-    public GameObject bar;
+    //public GameObject bar;
     //magic bar
     public Image magicBar;
     //Opening SaveFile
@@ -75,10 +75,8 @@ public class GameManager : MonoBehaviour {
             //SpawnEnemy();
         }
 
-        bar.transform.localScale = new Vector3(Mathf.Clamp(((float)Health / (float)mHealth), 0f, 1f),
-                                                     bar.transform.localScale.y,
-                                                     bar.transform.localScale.z);
-        magicBar.fillAmount = (float)Magic / (float)maxMagic;
+        //bar.transform.localScale = new Vector3(Mathf.Clamp(((float)Health / (float)mHealth), 0f, 1f),bar.transform.localScale.y,bar.transform.localScale.z);
+        //magicBar.fillAmount = (float)Mana / (float)mMana;
 
     }
     // Update is called once per frame
@@ -98,16 +96,16 @@ public class GameManager : MonoBehaviour {
             SpawnEnemy();
             print("SpawnEnemy");
         }
-        curLevelText.text=("Level: " + Level);
-        PlayerLevelText.text = ("Player Level: " + pLevel);
-        exText.text = ("ex: " + ex);
-        speedText.text = ("Speed: " + Speed);
-        healthText.text = ("Health: " + Health+"/"+mHealth);
-        attackText.text = ("Attack: " + minAttack + "/" + maxAttack);
-        defenceText.text = ("Defence: " + minDefence + "/" + maxDefence);
-        magicText.text = ("Magic: " + Magic + "/" + maxMagic);
+        //curLevelText.text=("Level: " + Level);
+        //PlayerLevelText.text = ("Player Level: " + pLevel);
+        //exText.text = ("ex: " + ex);
+        //speedText.text = ("Speed: " + Speed);
+        //healthText.text = ("Health: " + Health+"/"+mHealth);
+        //attackText.text = ("Attack: " + minAttack + "/" + maxAttack);
+        //defenceText.text = ("Defence: " + minDefence + "/" + maxDefence);
+        //magicText.text = ("Mana: " + Mana + "/" + mMana);
 
-        if(ex>=10){//make upgrade button visible 
+        /*if(ex>=10){//make upgrade button visible 
             upgradeBtn.gameObject.SetActive(true);
         }
         else{
@@ -123,7 +121,7 @@ public class GameManager : MonoBehaviour {
 
         bar = GameObject.FindGameObjectWithTag("healthBar");
         magicBar = GameObject.FindGameObjectWithTag("magicBar").GetComponent<Image>();
-
+		*/
 
 
     }
@@ -153,7 +151,7 @@ public class GameManager : MonoBehaviour {
 
     public void MagicPlus()
     {
-        Magic++;
+        Mana++;
     }
     
     public void Save()
@@ -168,12 +166,6 @@ public class GameManager : MonoBehaviour {
         sw.WriteLine(Speed);
         sw.WriteLine(Health);
         sw.WriteLine(mHealth);
-        sw.WriteLine(minAttack);
-        sw.WriteLine(maxAttack);
-        sw.WriteLine(minDefence);
-        sw.WriteLine(maxDefence);
-        sw.WriteLine(Magic);
-        sw.WriteLine(maxMagic);
 
         sw.Close();
         
@@ -189,13 +181,6 @@ public class GameManager : MonoBehaviour {
         Speed = Int32.Parse(sr.ReadLine());
         Health = Int32.Parse(sr.ReadLine());
         mHealth = Int32.Parse(sr.ReadLine());
-        minAttack = Int32.Parse(sr.ReadLine());
-        maxAttack = Int32.Parse(sr.ReadLine());
-        minDefence = Int32.Parse(sr.ReadLine());
-        maxDefence = Int32.Parse(sr.ReadLine());
-        Magic = Int32.Parse(sr.ReadLine());
-        maxMagic = Int32.Parse(sr.ReadLine());
-
 
         sr.Close();
     }
