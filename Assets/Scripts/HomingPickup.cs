@@ -2,53 +2,52 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+
 public class HomingPickup : MonoBehaviour {
 	public GameObject player = null;
 	public Transform target = null;
 
-	public float speed = 5f;
+	public float speed = 5.0f;
 	public float rotateSpeed = 200f;
+	public bool pickup = true;
 
-	private Rigidbody2D rb;
 	//private GameLoop gameloop = GameObject.Find("GM").GetComponent <GameLoop> ();
 	// Use this for initialization
 	void Start () {
 		findPlayer();
-		rb = GetComponent<Rigidbody2D>();
 	}
 	IEnumerator MyCoroutine()
-    {
-            yield return new WaitForSeconds(.5f);
-            findPlayer();
-    }
+	{
+		yield return new WaitForSeconds(.5f);
+		findPlayer();
+	}
 	private void findPlayer(){
-        player = GameObject.FindGameObjectWithTag("Player");
+		player = GameObject.FindGameObjectWithTag("Player");
 		target = player.transform;
-    }
-	void FixedUpdate () {
-		Vector2 direction = (Vector2)target.position - rb.position;
-
-		direction.Normalize();
-
-		float rotateAmount = Vector3.Cross(direction, transform.up).z;
-
-		rb.angularVelocity = -rotateAmount * rotateSpeed;
-
-		rb.velocity = transform.up * speed;
-
-
 	}
 	
-	void OnTriggerEnter2D (Collider2D collision)
+	void Update()
+	{
+		// Rotate the camera every frame so it keeps looking at the target
+		transform.LookAt(target);
+		transform.Translate(Vector3.forward * speed * Time.deltaTime);
+		
+		
+	}
+
+	void OnTriggerEnter (Collider collision)
 	{
 		// Put a particle effect here
 		if(collision.gameObject.tag == "Player")
 		{
 			//gameloop.Magic++;
-			collision.GetComponent<PlayerHealthandSave>().manaUp();
+			if (pickup == true)
+				collision.GetComponent<PlayerHealthandSave> ().manaUp ();
+			else 
+				collision.GetComponent<PlayerHealthandSave> ().healthUp ();
+			
 			Destroy(gameObject);
 		}
-			
+
 	}
 }

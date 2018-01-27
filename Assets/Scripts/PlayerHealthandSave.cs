@@ -35,6 +35,10 @@ public class PlayerHealthandSave : MonoBehaviour {
 		if(gameloop.Mana<gameloop.mMana)
 			gameloop.Mana++;
 	}
+	public void healthUp(){
+		if(gameloop.Health<gameloop.mHealth)
+			gameloop.Health++;
+	}
 	private void OnTriggerEnter2D(Collider2D collision)
     {
 		if(collision.gameObject.tag == "EnemyAttack")

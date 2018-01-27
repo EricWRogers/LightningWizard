@@ -4,13 +4,40 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour {
 
+	public int curHP;
+	public int maxHP = 50;
+	public GameManager gameloop;
+	public GameObject mana;
+
 	// Use this for initialization
 	void Start () {
-		
+		curHP = maxHP;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	private void Awake()
+	{
+		gameloop = GameObject.Find("GM").GetComponent <GameManager> ();
+	}
+
+	public void TakeDamage(int amt) {
+		if (curHP > 0) {
+			curHP -= amt;
+			if (curHP <= 0) {
+				curHP = 0;
+				Die ();
+			}
+		}
+	}
+
+	void Die() {
+		if (gameloop) {
+			gameloop.Souls++;
+			gameloop.numOfEnemies--;
+		}
+		Debug.Log(mana);
+
+		Destroy (gameObject);
+		//transform.position = transform.position.z - 10;
+		Instantiate(mana, transform.position , transform.rotation);
 	}
 }
