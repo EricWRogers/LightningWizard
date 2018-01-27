@@ -6,7 +6,7 @@ using System.IO;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
-//Player
+    //Player
     public int Level = 1;
     public int pLevel = 0;
     public int nextLevel = 5;

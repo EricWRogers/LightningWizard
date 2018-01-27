@@ -14,7 +14,7 @@ public class Soldier : MonoBehaviour {
 		
 	}
 
-    void moveTowards(Vector3 targetPos)
+    public void moveTowards(Vector3 targetPos)
     {
         
     }

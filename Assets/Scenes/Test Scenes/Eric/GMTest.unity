@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -121,6 +121,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 860985214}
+  - component: {fileID: 860985215}
   m_Layer: 0
   m_Name: GM
   m_TagString: Untagged
@@ -141,6 +142,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &860985215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 860985213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aac28b016cd54dcc998891b260cf7c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 1
+  pLevel: 0
+  nextLevel: 5
+  ex: 0
+  Speed: 1
+  Health: 10
+  mHealth: 10
+  minAttack: 5
+  maxAttack: 10
+  minDefence: 5
+  maxDefence: 10
+  Magic: 15
+  maxMagic: 15
+  playerIsDead: 1
+  player: {fileID: 0}
+  pSpawner: {fileID: 0}
+  pExit: {fileID: 0}
+  Enemy: {fileID: 0}
+  numOfEnemies: 0
+  eSpawners: []
+  curLevelText: {fileID: 0}
+  PlayerLevelText: {fileID: 0}
+  exText: {fileID: 0}
+  speedText: {fileID: 0}
+  healthText: {fileID: 0}
+  attackText: {fileID: 0}
+  defenceText: {fileID: 0}
+  magicText: {fileID: 0}
+  upgradeBtn: {fileID: 0}
+  maxOutBtn: {fileID: 0}
+  bar: {fileID: 0}
+  magicBar: {fileID: 0}
 --- !u!1 &1075531787
 GameObject:
   m_ObjectHideFlags: 0
