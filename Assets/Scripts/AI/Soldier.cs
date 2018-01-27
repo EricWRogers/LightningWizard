@@ -15,10 +15,7 @@ public class Soldier : MonoBehaviour
 
     private const string bulletSpawnerName = "bulletSpawner";
 
-
     public GameObject bulletPrefab;
-
-    public float bulletSpeed = 3f;
 
     /// <summary>
     /// Counted in seconds
@@ -119,7 +116,7 @@ public class Soldier : MonoBehaviour
             GameObject bulletGameObject = Instantiate(bulletPrefab, bulletSpawnerTransform.position, bulletSpawnerTransform.rotation);
             SoldierBullet soldierBullet = bulletGameObject.GetComponent<SoldierBullet>();
 
-            soldierBullet.setVelocity(transform.forward.normalized*bulletSpeed);
+            soldierBullet.setTarget(targetPos);
             lastAttackTime = Time.time;
         }
     }

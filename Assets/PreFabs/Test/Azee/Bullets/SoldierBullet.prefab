@@ -123,3 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4afbcfc05ae5ab440a686f1167ed30b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileMotion: 0
+  upwardForceFactor: 100
+  speed: 10

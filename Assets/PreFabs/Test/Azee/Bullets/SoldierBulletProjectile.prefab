@@ -125,3 +125,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileMotion: 1
   upwardForceFactor: 500
+  speed: 7

@@ -6,17 +6,21 @@ public class SoldierBullet : MonoBehaviour
 {
     public bool projectileMotion = false;
     public float upwardForceFactor = 100;
+    public float speed = 5;
 
     Rigidbody rigidbody;
 
-    Vector3 bulletVelocity;
+    Vector3 targetPos;
+
 
 
 	// Use this for initialization
 	void Start ()
 	{
 	    rigidbody = GetComponent<Rigidbody>();
-	    rigidbody.velocity = bulletVelocity;
+
+        transform.LookAt(targetPos);
+        rigidbody.velocity = transform.forward.normalized * speed;
         if (projectileMotion)
         {
             rigidbody.useGravity = true;
@@ -26,12 +30,12 @@ public class SoldierBullet : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        transform.LookAt(targetPos);
+    }
 
-    public void setVelocity(Vector3 vel)
+    public void setTarget(Vector3 pos)
     {
-        bulletVelocity = vel;
+        targetPos = pos;
     }
 
     void OnTriggerEnter(Collider collider)
