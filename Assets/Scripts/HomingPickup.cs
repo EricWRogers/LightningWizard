@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class HomingMissile : MonoBehaviour {
+public class HomingPickup : MonoBehaviour {
 	public GameObject player = null;
 	public Transform target = null;
 
