@@ -20,7 +20,7 @@ public class Unit : MonoBehaviour
     {
         foreach (Soldier soldier in soldiers)
         {
-            soldier.moveToPlayer();
+//            soldier.moveToPlayer();
         }
     }
 }
