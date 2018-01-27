@@ -20,7 +20,7 @@ public class pauseMenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         // Enable pause menu
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton7) || Input.GetKeyDown(KeyCode.JoystickButton9) && !isEnabled)
+        if (Input.GetKeyDown(KeyCode.Escape)  && !isEnabled)
         {
             pause.SetActive(true);
             isEnabled = true;
@@ -30,7 +30,39 @@ public class pauseMenu : MonoBehaviour {
         }
 
         // disable pause menu
-        else if (Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.JoystickButton7)||Input.GetKeyDown(KeyCode.JoystickButton9) && isEnabled)
+        else if (Input.GetKeyDown(KeyCode.Escape) && isEnabled)
+        {
+            pause.SetActive(false);
+            isEnabled = false;
+            Time.timeScale = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.JoystickButton7) && !isEnabled)
+        {
+            pause.SetActive(true);
+            isEnabled = true;
+            Time.timeScale = 0;
+            //quitBtn.SetActive(true);
+            //adds.SetActive(false);
+        }
+
+        // disable pause menu
+        else if (Input.GetKeyDown(KeyCode.JoystickButton7) && isEnabled)
+        {
+            pause.SetActive(false);
+            isEnabled = false;
+            Time.timeScale = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.JoystickButton9) && !isEnabled)
+        {
+            pause.SetActive(true);
+            isEnabled = true;
+            Time.timeScale = 0;
+            //quitBtn.SetActive(true);
+            //adds.SetActive(false);
+        }
+
+        // disable pause menu
+        else if (Input.GetKeyDown(KeyCode.JoystickButton9) && isEnabled)
         {
             pause.SetActive(false);
             isEnabled = false;
