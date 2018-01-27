@@ -1,11 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Models/Maya/Enviroment/barrelclosed.fbx.meta
 guid: e927d43fd188e4f2da50a98d5eb0ce13
-=======
-guid: 172bff844246c6246bccc2f591b981fa
-timeCreated: 1517087510
-licenseType: Free
->>>>>>> a0c0b84083f3c3d488f3772816f19a79d290fa50:Assets/Models/Maya/Environment/barrelclosed.fbx.meta
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:

@@ -1,11 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Models/Maya/Enviroment/pillar3.fbx.meta
 guid: 29ced5bea580e4ad3a17959238cf9c95
-=======
-guid: 814717dd9b00e31489a94f0dd4ef4911
-timeCreated: 1517087510
-licenseType: Free
->>>>>>> a0c0b84083f3c3d488f3772816f19a79d290fa50:Assets/Models/Maya/Environment/pillar3.fbx.meta
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:

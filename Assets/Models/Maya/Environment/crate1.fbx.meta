@@ -1,11 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Models/Maya/Enviroment/crate1.fbx.meta
 guid: d5006e0650d2f46bca80c8e4128ec7f2
-=======
-guid: abb629f5374d68146988a549751186c7
-timeCreated: 1517087511
-licenseType: Free
->>>>>>> a0c0b84083f3c3d488f3772816f19a79d290fa50:Assets/Models/Maya/Environment/crate1.fbx.meta
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
