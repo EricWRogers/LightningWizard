@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class pauseMenu : MonoBehaviour {
+    
     public GameObject pause;
     private bool isEnabled = false;
 
+    public GameObject optionsVol;
     private GameManager gameloop;
 
     void Start()
@@ -48,7 +50,7 @@ public class pauseMenu : MonoBehaviour {
     }
 
     public void Options(){
-        
+        optionsVol.SetActive(true);
     }
 
     public void Quit()

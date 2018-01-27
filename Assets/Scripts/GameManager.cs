@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
     public int mHealth = 10;
 	public int Mana = 10;
 	public int mMana = 10;
+	public int Souls = 10;
 
     //Player Spawner and Exit
     public bool playerIsDead = true;
