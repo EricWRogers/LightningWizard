@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114908641058985640}
   - component: {fileID: 65602659275405690}
   - component: {fileID: 195958946326272940}
+  - component: {fileID: 114129493267233508}
   m_Layer: 2
   m_Name: Soldier
   m_TagString: Untagged
@@ -127,6 +128,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.7, y: 1, z: 1.7}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114129493267233508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1518794757459498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4d719d547540ffad3656a41750918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curHP: 0
+  maxHP: 50
+  gameloop: {fileID: 0}
+  mana: {fileID: 1181222250786576, guid: cd71d8fa327494be2a08de8b0e81a196, type: 2}
+  health: {fileID: 1217076175899330, guid: 9d1bfe4dcf08842a4960144b0ee1c721, type: 2}
 --- !u!114 &114908641058985640
 MonoBehaviour:
   m_ObjectHideFlags: 1
