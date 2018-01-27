@@ -1,5 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: e40ae99a8eb9245ec9b462dcb3d4dd16
+timeCreated: 1517075662
+=======
+guid: 5fa0c6a1c7de541329f983a052de212c
+timeCreated: 1517075650
+>>>>>>> Stashed changes
+licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -86,9 +93,6 @@ ModelImporter:
     100160: wallstone3 1
     100162: wallstone3 2
     100164: wallstone3 3
-    100166: wall4
-    100168: wall4 1
-    100170: wall5
     400000: arch
     400002: arch 1
     400004: arch 2
@@ -172,9 +176,6 @@ ModelImporter:
     400160: wallstone3 1
     400162: wallstone3 2
     400164: wallstone3 3
-    400166: wall4
-    400168: wall4 1
-    400170: wall5
     2100000: lambert1
     2300000: arch 1
     2300002: arch 2
@@ -243,9 +244,6 @@ ModelImporter:
     2300128: wallstone3 1
     2300130: wallstone3 2
     2300132: wallstone3 3
-    2300134: wall4
-    2300136: wall4 1
-    2300138: wall5
     3300000: arch 1
     3300002: arch 2
     3300004: arch3
@@ -313,9 +311,6 @@ ModelImporter:
     3300128: wallstone3 1
     3300130: wallstone3 2
     3300132: wallstone3 3
-    3300134: wall4
-    3300136: wall4 1
-    3300138: wall5
     4300000: wallstone2
     4300002: wallstone1
     4300004: smallwallstone3
@@ -383,9 +378,6 @@ ModelImporter:
     4300128: smallwallstone6
     4300130: smallwallstone7
     4300132: smallwallstone8
-    4300134: wall4
-    4300136: wall5
-    4300138: wall4
     9500000: //RootNode
   externalObjects: {}
   materials:
