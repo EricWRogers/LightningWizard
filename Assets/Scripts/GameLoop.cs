@@ -57,9 +57,6 @@ public class GameLoop : MonoBehaviour {
         SpawnEnemy();
         spawnPlayer();
         //spawnPlayer();
-
-
-
     }
     private void FixedUpdate(){
         
@@ -124,9 +121,8 @@ public class GameLoop : MonoBehaviour {
         bar = GameObject.FindGameObjectWithTag("healthBar");
         magicBar = GameObject.FindGameObjectWithTag("magicBar").GetComponent<Image>();
 
-
-
     }
+
     //Find All Spawners in level
     void AutoFindSpawns()
     {
@@ -134,6 +130,7 @@ public class GameLoop : MonoBehaviour {
         pSpawner = GameObject.FindGameObjectWithTag("playerSpawner");
         pExit = GameObject.FindGameObjectWithTag("playerExit");
     }
+
     //spawnEnemys it takes the level and give the enemies random stats based on the level number
     void SpawnEnemy()
     {  
@@ -176,8 +173,8 @@ public class GameLoop : MonoBehaviour {
         sw.WriteLine(maxMagic);
 
         sw.Close();
-        
     }
+
     public void Load()
     {
         StreamReader sr = File.OpenText(FILE_NAME);
