@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour {
 	public int maxHP = 50;
 	public GameManager gameloop;
 	public GameObject mana;
+	public GameObject health;
 
 	// Use this for initialization
 	void Start () {
@@ -39,5 +40,6 @@ public class EnemyHealth : MonoBehaviour {
 		Destroy (gameObject);
 		//transform.position = transform.position.z - 10;
 		Instantiate(mana, transform.position , transform.rotation);
+		Instantiate(health, transform.position , transform.rotation);
 	}
 }
