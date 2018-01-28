@@ -4,6 +4,8 @@ using System.Collections;
 
 public class CompleteCameraController : MonoBehaviour
 {
+    public float lerpFactor = 4f;
+
     //public bool playerDead = false;
     public GameObject player = null;       //Public variable to store a reference to the player game object
     public GameManager gameloop;
@@ -24,7 +26,7 @@ public class CompleteCameraController : MonoBehaviour
     }
 
     // LateUpdate is called after Update each frame
-    void LateUpdate()
+    void FixedUpdate()
     {
         if (player != null)
         {
@@ -32,14 +34,14 @@ public class CompleteCameraController : MonoBehaviour
             cameraPos = player.transform.position + offset;
             cameraPos.y = player.transform.position.y + offset.y;
             cameraPos.x = player.transform.position.x + offset.x/2;
-            transform.localPosition = cameraPos;
-        }if(gameloop.playerIsDead==true)
+			transform.localPosition = Vector3.Lerp (transform.localPosition, cameraPos, Time.deltaTime * lerpFactor);
+        }
+
+        if (gameloop.playerIsDead==true)
         {
             findPlayer();
             gameloop.playerIsDead = false;
         }
-        
-        
     }
 
     private void findPlayer(){

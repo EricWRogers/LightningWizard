@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Spawners
+  - playerSpawner
+  - playerExit
+  - Enemy
   layers:
   - Default
   - TransparentFX
