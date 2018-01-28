@@ -10,12 +10,14 @@ public class PlayerController : MonoBehaviour {
     public float gravityScale = 20.0F;
     public bool canMove = true;
     public CharacterController player;
+    public Animator anim;
     private Vector3 moveDirection = Vector3.zero;
     private float vertVelocity, moveLR, moveFB;
 
     void Start()
     {
         player = GetComponent<CharacterController>();
+        anim = GetComponentInChildren<Animator>();
         canMove = true;
 
     }
@@ -36,7 +38,16 @@ public class PlayerController : MonoBehaviour {
 	{
 		if (Input.GetButtonDown("Fire1"))
 			lightningBall ();
-	}
+
+        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
+    }
     private void ApplyGravity()
     {
         vertVelocity += Physics.gravity.y * gravityScale * Time.deltaTime;
