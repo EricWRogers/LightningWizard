@@ -15,6 +15,7 @@ public class pauseMenu : MonoBehaviour {
     void Start()
     {
         gameloop = GameObject.Find("GM").GetComponent<GameManager>();
+        FindObjectOfType<SoundManager>().Play("LWGameplayTrack");
     }
 	
 	// Update is called once per frame
@@ -25,8 +26,7 @@ public class pauseMenu : MonoBehaviour {
             pause.SetActive(true);
             isEnabled = true;
             Time.timeScale = 0;
-            //quitBtn.SetActive(true);
-            //adds.SetActive(false);
+
         }
 
         // disable pause menu
@@ -71,22 +71,26 @@ public class pauseMenu : MonoBehaviour {
     }
     public void SaveButton()
     {
-        //PersistentStorage.instance.Save();//saves 
+         
         gameloop.Save();
+        FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
     }
 
     public void Resume(){
         pause.SetActive(false);
         isEnabled = false;
         Time.timeScale = 1;
+        FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
     }
 
     public void Options(){
         optionsVol.SetActive(true);
+        FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
     }
 
     public void Quit()
     {
         SceneManager.LoadScene("startMenu", LoadSceneMode.Single);//loads start menu
+        FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
     }
 }
