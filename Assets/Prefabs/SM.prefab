@@ -52,39 +52,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Gameplay
+  - name: LWGameplayTrack
     clip: {fileID: 8300000, guid: 3d8d3b10590d94b5eb5fef966b754084, type: 3}
     volume: 0.61
-    pitch: 1.65
     source: {fileID: 0}
-    loop: 0
-  - name: CrackingFire
+    loop: 1
+  - name: CrackingFire2
     clip: {fileID: 8300000, guid: c96fedb8ae0a948fbaf2b7df5dc81238, type: 3}
     volume: 0.61
-    pitch: 1.65
     source: {fileID: 0}
     loop: 0
-  - name: MusketFire
+  - name: DWMusketfire
     clip: {fileID: 8300000, guid: 17332b9eed97b48f6bb285a0033ea0c8, type: 3}
     volume: 0.61
-    pitch: 1.65
     source: {fileID: 0}
     loop: 0
   - name: FireBall
     clip: {fileID: 8300000, guid: 87c69ad9ee4024eeb8927ed7ee696df7, type: 3}
     volume: 0.61
-    pitch: 1.65
     source: {fileID: 0}
     loop: 0
-  - name: LightningTel
+  - name: LightningTeleport
     clip: {fileID: 8300000, guid: 9b934c7e255d249c7b7bfc974d8155e2, type: 3}
     volume: 0.61
-    pitch: 1.65
     source: {fileID: 0}
     loop: 0
-  - name: MenuButtonSelect
+  - name: MenuButtonSelectSound
     clip: {fileID: 8300000, guid: b6d186cbbfaf04a72a54e3e27b0623e3, type: 3}
-    volume: 0.61
-    pitch: 1.65
+    volume: 1
     source: {fileID: 0}
     loop: 0

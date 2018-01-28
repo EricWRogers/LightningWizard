@@ -18,14 +18,15 @@ void Awake()
             s.source.clip = s.clip;
 
             s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
+
         }
     }
 
     public void Play(string name)
     {
         sound s = Array.Find(sounds, sound => sound.name == name);
-        //s.source = Play();
+        s.source.Play();
 
     }
 

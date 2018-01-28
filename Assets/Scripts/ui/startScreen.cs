@@ -14,14 +14,16 @@ public class startScreen : MonoBehaviour {
     public void StartButton()
     {
         SceneManager.LoadScene("level1", LoadSceneMode.Single);//load scene level
+        FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
     }
 
     public void LoadButton()
     {
-
+        FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
     }
     public void CreditsButton()
     {
+        FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
         //credits.SetActive(true);
     }
 
