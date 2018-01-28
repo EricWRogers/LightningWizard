@@ -13,6 +13,10 @@ public class startScreen : MonoBehaviour {
     public GameObject splashD;
     public float time=80f;
 
+    public void Start()
+    {
+        FindObjectOfType<SoundManager>().Play("LWMenuTrack");
+    }
     public void Update()
     {
 
