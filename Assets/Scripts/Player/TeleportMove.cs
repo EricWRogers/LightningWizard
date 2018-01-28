@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class TeleportMove : MonoBehaviour
 {
+    public enum State
+    {
+        Idle,
+        Dabbing,
+        Teleporting
+    }
+
     public float teleportRange = 10f;
     public float teleportSpeed = 10f;
 
+    public float dabPercent = 10f;
+
     public ParticleSystem transmissionParticleSystem;
+
+    [HideInInspector]
+    public State currentState = State.Idle;
 
     CharacterController characterController;
     PlayerController playerController;
@@ -53,7 +65,7 @@ public class TeleportMove : MonoBehaviour
 	        }
 	    }
 
-	    if (isTeleporting)
+	    if (currentState != State.Idle)
 	    {
 	        float totalDist = Vector3.Distance(teleportSource, teleportTarget);
 	        float currentDist = Vector3.Distance(teleportSource, transform.position);
@@ -64,6 +76,27 @@ public class TeleportMove : MonoBehaviour
 	        }
 	        else
 	        {
+	            float dabInterval = ((totalDist*dabPercent)/100);
+
+                Debug.Log("TD: "+totalDist);
+                Debug.Log("CD: " + currentDist);
+                Debug.Log("DI: " + dabInterval);
+
+	            if (currentDist < dabInterval)
+                {
+                    currentState = State.Dabbing;
+                    oldScale = transform.localScale;
+                } else if (currentDist >= dabInterval && currentDist < (totalDist - dabInterval))
+                {
+                    currentState = State.Teleporting;
+                    transform.localScale = Vector3.zero;
+                }
+                else
+                {
+                    currentState = State.Dabbing;
+                    transform.localScale = oldScale;
+                }
+
 	            characterController.Move((teleportTarget - transform.position).normalized * teleportSpeed);
 	        }
 	    }
@@ -73,13 +106,10 @@ public class TeleportMove : MonoBehaviour
     void startTeleport(Vector3 endPos)
     {
         playerController.canMove = false;
-        isTeleporting = true;
+        currentState = State.Dabbing;
 
         teleportSource = transform.position;
         teleportTarget = endPos;
-
-        oldScale = transform.localScale;
-        transform.localScale = Vector3.zero;
 
         transmissionParticleSystem.Play();
     }
@@ -87,9 +117,7 @@ public class TeleportMove : MonoBehaviour
     void stopTeleport()
     {
         playerController.canMove = true;
-        isTeleporting = false;
-
-        transform.localScale = oldScale;
+        currentState = State.Idle;
 
         transmissionParticleSystem.Stop();
     }
