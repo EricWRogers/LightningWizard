@@ -8,6 +8,10 @@ public class startScreen : MonoBehaviour {
 
     public GameObject credits;
     public GameObject controls;
+    public GameObject us;
+    public GameObject splashGGJ;
+    public GameObject splashD;
+    public float time=80f;
 
     public void Update()
     {
@@ -30,8 +34,25 @@ public class startScreen : MonoBehaviour {
     }
     public void CreditsButton()
     {
+        time = -Time.deltaTime;
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
         credits.SetActive(true);
+        if(time<60f){
+            credits.SetActive(false);
+            us.SetActive(true);
+        }
+        else if(time<40f){
+            us.SetActive(false);
+            splashD.SetActive(true);
+        }
+        else if(time<20f){
+            splashD.SetActive(false);
+            splashGGJ.SetActive(true);
+        }
+        else if(time<0f){
+            splashGGJ.SetActive(false);
+        }
+
     }
 
 }
