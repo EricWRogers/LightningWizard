@@ -26,8 +26,7 @@ public class pauseMenu : MonoBehaviour {
             pause.SetActive(true);
             isEnabled = true;
             Time.timeScale = 0;
-            //quitBtn.SetActive(true);
-            //adds.SetActive(false);
+
         }
 
         // disable pause menu
