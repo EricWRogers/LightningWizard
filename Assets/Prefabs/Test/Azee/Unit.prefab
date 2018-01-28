@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4812942137253758}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: bulletSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 114815127686573766}
   - component: {fileID: 65290341744418694}
   - component: {fileID: 195254445714814532}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Soldier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,6 +183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f799b710e24c248ac034588a8d692e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 0}
+  attackWaitTime: 0.5
+  bulletSpawnerTransform: {fileID: 0}
 --- !u!143 &143505969539653358
 CharacterController:
   m_ObjectHideFlags: 1
