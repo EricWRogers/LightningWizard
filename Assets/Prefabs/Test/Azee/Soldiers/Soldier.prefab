@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4348475495944780}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: bulletSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 65602659275405690}
   - component: {fileID: 195958946326272940}
   - component: {fileID: 114129493267233508}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Soldier
   m_TagString: Untagged
   m_Icon: {fileID: 0}

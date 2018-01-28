@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4482226483374380}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: bulletSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114826240423722528}
   - component: {fileID: 65456432580959426}
   - component: {fileID: 195443918000220292}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: SoldierNew
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1585208801212752, guid: e00b3c6e9761f7147b468a8c29f07cfe,
     type: 2}
-  bulletSpeed: 15
   attackWaitTime: 0.5
   bulletSpawnerTransform: {fileID: 0}
 --- !u!143 &143547022104377920
