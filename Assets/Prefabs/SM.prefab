@@ -82,3 +82,123 @@ MonoBehaviour:
     volume: 1
     source: {fileID: 0}
     loop: 0
+  - name: LWMenuTrack
+    clip: {fileID: 8300000, guid: dbb72c94b52e34551ae5b063d24f172a, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: SD1
+    clip: {fileID: 8300000, guid: 8e3722bc379664d0a89a225ef4f28cad, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: SD2
+    clip: {fileID: 8300000, guid: ce9c3957d682f4c0aa31f1f814a3c4f5, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: SD3
+    clip: {fileID: 8300000, guid: 22799c64e7ea04a63bd7974784802603, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: SD4
+    clip: {fileID: 8300000, guid: b5fde45f9b5f945889d656b91f6bdb11, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: SD5
+    clip: {fileID: 8300000, guid: 96fbef5c94fc34d02a6222ef66efc495, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: SD6
+    clip: {fileID: 8300000, guid: 20f1668c7b1324aa3b271b01edb35007, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: SD7
+    clip: {fileID: 8300000, guid: e00c0736009ba4363a353a330e1d524b, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: SD8
+    clip: {fileID: 8300000, guid: 483f101da829d424da092529990e38c8, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: SD9
+    clip: {fileID: 8300000, guid: e459d665d21024aa4aefbb6e0ed89846, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: SoldierHit1
+    clip: {fileID: 8300000, guid: 07cf1135c62824967aefc160016d2462, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: SoldierHit2
+    clip: {fileID: 8300000, guid: d3aa44084889a4b3d97b6c06a5eeaf0b, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: SoldierHit3
+    clip: {fileID: 8300000, guid: 1db1a293eab97406fab6ed5ab64c86b3, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: SoldierHit4
+    clip: {fileID: 8300000, guid: 17216d985d53f4b9992a93e0be3ed832, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: SoldierHit5
+    clip: {fileID: 8300000, guid: 5a9fa20ab0f8f4bfd8df3e75e83acf2b, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: WD1
+    clip: {fileID: 8300000, guid: 5dffeed8788b94e059541f026656538a, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: WD2
+    clip: {fileID: 8300000, guid: 0155920f05006458591828acc319d6c3, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: WD3
+    clip: {fileID: 8300000, guid: 18c0354441ba94c0fb2f851ff62e58d8, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: WD4
+    clip: {fileID: 8300000, guid: 3884935562788498c84192465be98333, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: WD5
+    clip: {fileID: 8300000, guid: c4e7553e32fa646d58bcaacb39157068, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: WD6
+    clip: {fileID: 8300000, guid: faf360fa5d83c484c9f63d3f31a7936f, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: WD7
+    clip: {fileID: 8300000, guid: 7dd313905bd784ca582a9dc1df73f846, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: WD8
+    clip: {fileID: 8300000, guid: 56b6f1178859a47bab846a6ed68aa88a, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: WizardHit
+    clip: {fileID: 8300000, guid: 1c2cb660416d443fa8f16664eef5f5e5, type: 3}
+    volume: 1
+    source: {fileID: 0}
+    loop: 0
