@@ -15,6 +15,7 @@ public class TeleportMove : MonoBehaviour
     public float teleportSpeed = 10f;
 
     public float dabPercent = 10f;
+    public float teleportRangeAjdusment = 10f;
 
     public ParticleSystem transmissionParticleSystem;
 
@@ -54,10 +55,16 @@ public class TeleportMove : MonoBehaviour
 	            bool didHit = Physics.Raycast(transform.position, dir, out raycastHit, teleportRange);
 
 	            float teleportDist = teleportRange; 
+
                 if (didHit)
                 {
                     teleportDist = raycastHit.distance;
                 }
+
+	            teleportDist -= teleportRangeAjdusment;
+
+	            if (teleportDist < 0)
+	                teleportDist = 0;
 
                 Vector3 endPos = transform.position + (dir * teleportDist);
 
@@ -78,7 +85,7 @@ public class TeleportMove : MonoBehaviour
 	        {
 	            float dabInterval = ((totalDist*dabPercent)/100);
 
-                Debug.Log("TD: "+totalDist);
+                Debug.Log("TD: " + totalDist);
                 Debug.Log("CD: " + currentDist);
                 Debug.Log("DI: " + dabInterval);
 
