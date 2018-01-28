@@ -12,6 +12,8 @@ public class pauseMenu : MonoBehaviour {
     public GameObject optionsVol;
     private GameManager gameloop;
 
+    sound volu;
+
     void Start()
     {
         gameloop = GameObject.Find("GM").GetComponent<GameManager>();
@@ -41,8 +43,7 @@ public class pauseMenu : MonoBehaviour {
             pause.SetActive(true);
             isEnabled = true;
             Time.timeScale = 0;
-            //quitBtn.SetActive(true);
-            //adds.SetActive(false);
+
         }
 
         // disable pause menu
@@ -57,8 +58,7 @@ public class pauseMenu : MonoBehaviour {
             pause.SetActive(true);
             isEnabled = true;
             Time.timeScale = 0;
-            //quitBtn.SetActive(true);
-            //adds.SetActive(false);
+
         }
 
         // disable pause menu
@@ -92,5 +92,9 @@ public class pauseMenu : MonoBehaviour {
     {
         SceneManager.LoadScene("startMenu", LoadSceneMode.Single);//loads start menu
         FindObjectOfType<SoundManager>().Play("MenuButtonSelectSound");
+    }
+
+    public void GetVolume(float vol){
+        vol=volu.source.volume;
     }
 }

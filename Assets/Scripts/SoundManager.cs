@@ -20,6 +20,7 @@ void Awake()
             s.source.volume = s.volume;
             s.source.loop = s.loop;
 
+
         }
     }
 
