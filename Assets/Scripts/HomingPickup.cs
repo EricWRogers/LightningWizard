@@ -40,6 +40,7 @@ public class HomingPickup : MonoBehaviour {
 		// Put a particle effect here
 		if(collision.gameObject.tag == "Player")
 		{
+			Debug.Log ("hit");
 			//gameloop.Magic++;
 			if (pickup == true)
 				collision.GetComponent<PlayerHealthandSave> ().manaUp ();

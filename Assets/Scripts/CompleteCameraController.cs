@@ -32,7 +32,7 @@ public class CompleteCameraController : MonoBehaviour
             cameraPos = player.transform.position + offset;
             cameraPos.y = player.transform.position.y + offset.y;
             cameraPos.x = player.transform.position.x + offset.x/2;
-            transform.localPosition = cameraPos;
+			transform.localPosition = Vector3.Lerp (transform.localPosition, cameraPos, Time.deltaTime * 2f);
         }if(gameloop.playerIsDead==true)
         {
             findPlayer();

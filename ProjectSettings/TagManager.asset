@@ -7,6 +7,7 @@ TagManager:
   - Spawners
   - playerSpawner
   - playerExit
+  - Enemy
   layers:
   - Default
   - TransparentFX
