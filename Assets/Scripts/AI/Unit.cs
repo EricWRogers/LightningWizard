@@ -61,7 +61,7 @@ public class Unit : MonoBehaviour
     {
         foreach (Soldier soldier in soldiers)
         {
-            if (canSoldierSeePlayer(soldier))
+            if (soldier != null && canSoldierSeePlayer(soldier))
             {
                 lastSeenPlayerLocation = aiManager.playerGameObject.transform.position;
                 return true;
