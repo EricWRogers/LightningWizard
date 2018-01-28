@@ -113,11 +113,16 @@ public class Soldier : MonoBehaviour
 
         if (Time.time - lastAttackTime > attackWaitTime)
         {
-            GameObject bulletGameObject = Instantiate(bulletPrefab, bulletSpawnerTransform.position, bulletSpawnerTransform.rotation);
-            SoldierBullet soldierBullet = bulletGameObject.GetComponent<SoldierBullet>();
-
-            soldierBullet.setTarget(targetPos);
-            lastAttackTime = Time.time;
+            shoot(targetPos);
         }
+    }
+
+    void shoot(Vector3 targetPos)
+    {
+        GameObject bulletGameObject = Instantiate(bulletPrefab, bulletSpawnerTransform.position, bulletSpawnerTransform.rotation);
+        SoldierBullet soldierBullet = bulletGameObject.GetComponent<SoldierBullet>();
+
+        soldierBullet.setTarget(targetPos);
+        lastAttackTime = Time.time;
     }
 }

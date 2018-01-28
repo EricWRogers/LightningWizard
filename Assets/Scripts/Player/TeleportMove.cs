@@ -111,6 +111,8 @@ public class TeleportMove : MonoBehaviour
         teleportSource = transform.position;
         teleportTarget = endPos;
 
+        playerController.anim.SetTrigger("Teleport");
+
         transmissionParticleSystem.Play();
     }
 
