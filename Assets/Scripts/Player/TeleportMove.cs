@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class TeleportMove : MonoBehaviour
 {
-    public float teleportWaitTime = 0.5f;
     public float teleportRange = 10f;
+    public float teleportSpeed = 10f;
+
+    public ParticleSystem transmissionParticleSystem;
 
     CharacterController characterController;
     PlayerController playerController;
 
     bool isTeleporting = false;
-    float lastTeleportTime = 0;
-    Vector3 nextTeleportTarget;
+
+    Vector3 teleportSource;
+    Vector3 teleportTarget;
 
     Vector3 oldScale;
 
@@ -44,16 +47,25 @@ public class TeleportMove : MonoBehaviour
                     teleportDist = raycastHit.distance;
                 }
 
-                Vector3 endPos = new Vector3(dir.x, dir.y, dir.z);
-	            endPos = endPos*teleportDist;
+                Vector3 endPos = transform.position + (dir * teleportDist);
 
                 startTeleport(endPos);
 	        }
 	    }
 
-	    if (isTeleporting && Time.time - lastTeleportTime > teleportWaitTime)
+	    if (isTeleporting)
 	    {
-	        teleportTo(nextTeleportTarget);
+	        float totalDist = Vector3.Distance(teleportSource, teleportTarget);
+	        float currentDist = Vector3.Distance(teleportSource, transform.position);
+
+	        if (currentDist >= totalDist)
+	        {
+	            stopTeleport();
+	        }
+	        else
+	        {
+	            characterController.Move((teleportTarget - transform.position).normalized * teleportSpeed);
+	        }
 	    }
 	}
 
@@ -62,21 +74,23 @@ public class TeleportMove : MonoBehaviour
     {
         playerController.canMove = false;
         isTeleporting = true;
-        lastTeleportTime = Time.time;
-        nextTeleportTarget = endPos;
+
+        teleportSource = transform.position;
+        teleportTarget = endPos;
 
         oldScale = transform.localScale;
         transform.localScale = Vector3.zero;
 
-        //Moving the position too below the ground
+        transmissionParticleSystem.Play();
     }
 
-    void teleportTo(Vector3 targetPos)
+    void stopTeleport()
     {
         playerController.canMove = true;
         isTeleporting = false;
 
-        transform.position = targetPos;
         transform.localScale = oldScale;
+
+        transmissionParticleSystem.Stop();
     }
 }

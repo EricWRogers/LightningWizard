@@ -26,7 +26,7 @@ public class CompleteCameraController : MonoBehaviour
     }
 
     // LateUpdate is called after Update each frame
-    void LateUpdate()
+    void FixedUpdate()
     {
         if (player != null)
         {
@@ -35,13 +35,13 @@ public class CompleteCameraController : MonoBehaviour
             cameraPos.y = player.transform.position.y + offset.y;
             cameraPos.x = player.transform.position.x + offset.x/2;
 			transform.localPosition = Vector3.Lerp (transform.localPosition, cameraPos, Time.deltaTime * lerpFactor);
-        } if (gameloop.playerIsDead==true)
+        }
+
+        if (gameloop.playerIsDead==true)
         {
             findPlayer();
             gameloop.playerIsDead = false;
         }
-        
-        
     }
 
     private void findPlayer(){
