@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+	public GameObject LBall;
     public float moveSpeed = 5.0F;
     public float jumpSpeed = 8.0F;
     public float gravityScale = 20.0F;
@@ -31,6 +32,11 @@ public class PlayerController : MonoBehaviour {
 
         ApplyGravity();
     }
+	void Update()
+	{
+		if (Input.GetButtonDown("Fire1"))
+			lightningBall ();
+	}
     private void ApplyGravity()
     {
         vertVelocity += Physics.gravity.y * gravityScale * Time.deltaTime;
@@ -69,7 +75,15 @@ public class PlayerController : MonoBehaviour {
             //This condition prevents from spamming "Look rotation viewing vector is zero" when not moving.
             transform.forward = facingrotation;
         }
-
-
     }
+
+	void lightningBlade()
+	{
+
+	}
+
+	void lightningBall()
+	{
+		Instantiate(LBall, transform.position, transform.rotation);
+	}
 }
